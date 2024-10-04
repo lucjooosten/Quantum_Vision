@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+# Angular Frontend
+  client:
+    container_name: QuantumVision_Angular
+    build: 
+      context: ./Frontend
+      dockerfile: Dockerfile
+    ports:
+      - "6700:80" # Bind the Angular app to port 6700 from nginx
+    environment:
+      - API_URL=http://server:6600
+    networks:
+      - flight-os-network
+    depends_on:
+      - server
+
+# .NET Backend
+  server:
+    container_name: QuantumVision_API
+    build: 
+      context: ./Backend
+      dockerfile: ./Quantum_Vision.Api/Dockerfile
+    ports:
+      - "6600:8080" # Bind the API to port 6600
+    environment:
+      - ASPNETCORE_URLS=http://+:8080
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+      - flight-os-network
+
+networks:
+  flight-os-network:
+    driver: bridge
+    external: true
+    enable_ipv6: true
+    ipam:
+      config:
+        - subnet: "172.16.0.0/24"

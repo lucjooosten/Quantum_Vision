@@ -1,0 +1,94 @@
+# backend\
+/.vs/
+/bin/
+/obj/
+[Bb]uild/
+[Oo]bj/
+*.dbmdl
+*.pidb
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vssscc
+*.vssscbk
+*.builds
+*.svclog
+*.publish
+*.pubxml
+*.pubxml.user
+*.cache
+*.csproj.vspscc
+*.myapp
+*.myapp.pubxml
+*.publishsettings
+*.pubxml.user
+*.userprefs
+*.vspscc
+*.vssscc
+*.vsmdi
+*.pidb
+*.suo
+*.sln.docstates
+*.vs/
+*.cache
+*.csproj.vspscc
+*.pidb
+*.suo
+*.user
+*.vssscc
+*.vsmdi
+*.pubxml.user
+*.myapp
+*.myapp.pubxml
+*.publishsettings
+*.pubxml
+*.userprefs
+*.vspscc
+*.cache
+*.user
+*.vssscc
+*.sln.docstates
+*.vs
+
+# frontend\
+# Compiled output
+**/dist
+**/tmp
+**/out-tsc
+**/bazel-out
+
+# Node
+**/node_modules
+**/npm-debug.log
+**/yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# System files
+.DS_Store
+Thumbs.db
