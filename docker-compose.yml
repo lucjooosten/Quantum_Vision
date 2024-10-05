@@ -12,7 +12,7 @@ services:
     environment:
       - API_URL=http://server:6600
     networks:
-      - flight-os-network
+      - quantum-vision-network
     depends_on:
       - server
 
@@ -28,10 +28,10 @@ services:
       - ASPNETCORE_URLS=http://+:8080
       - ASPNETCORE_ENVIRONMENT=Development
     networks:
-      - flight-os-network
+      - quantum-vision-network
 
 networks:
-  flight-os-network:
+  quantum-vision-network:
     driver: bridge
     external: true
     enable_ipv6: true
